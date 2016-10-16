@@ -1,0 +1,248 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #101;
+}
+h1 {
+  color: #22f;
+  margin: -17% 0 0 20%;
+  letter-spacing: 2.5px;
+  text-shadow: 2.5px 2.5px 6px #ffa;
+}
+h2 {
+  color: #eea;
+  margin: 17% auto -2%;
+  display: block;
+  text-align: center;
+}
+h3 {
+  color: #91d;
+}
+h4, h5 {
+  color: #bbb;
+  margin: 1% 0 0 20%;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px #000;
+}
+h5 {
+  font-size: 1em;
+}
+header {
+  width: 1200px;
+  margin: 0 auto -10%;
+}
+header img {
+  width: inherit;
+  margin: -10px auto;
+}
+.ephoto {
+  margin: -8% 0 0 8%;
+  border: 10px solid #101;
+}
+main {
+  width: 92%;
+  margin: 2% auto -12%;
+  display: flex;
+  justify-content: space-between;
+}
+.fb-page {
+  display: block;
+  border: 10px solid rgba(255, 60, 10, 0.5);
+  background-color: #343333;
+  margin: 3% auto;
+  text-align: center;
+  width: 40%;
+  padding: 3%;
+  max-height: 35em;
+}
+.twitterStyle {
+  width: 40%;
+  background-color: #343333;
+  margin: 3% auto;
+  padding: 1%;
+  border: 10px solid rgba(255, 60, 10, 0.5);
+  max-height: 35em;
+  overflow: auto;
+}
+#map {
+  margin: 4% auto;
+  border: 10px solid rgba(255, 60, 10, 0.5);
+}
+.info {
+  background-color: #ffa;
+  padding: 5%;
+}
+footer {
+  width: 100%;
+  margin: 2% auto 4%;
+  padding: 2%;
+  background-color: #111;
+  box-sizing: border-box;
+}
+footer p {
+  color: #999;
+  margin-left: 10%
+}
+@media (min-width: 1201px)  {
+      main {
+        width: 1200px;
+      }
+      #map {
+        height: 35%;
+        width: 35%;
+      }
+}
+@media (min-width: 961px) and (max-width: 1200px)  {
+      h2 {
+        margin: 15% auto 2%;
+        clear: both;
+      }
+      header {
+        width: 100%;
+      }
+      main {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      div.fb-page.fb_iframe_widget {
+        display: block;
+        margin: auto;
+      }
+      .fb-page {
+        margin: auto;
+        clear: both;
+        width: 80%;
+      }
+      .twitterStyle {
+        display: block;
+        clear: left;
+        width: 84%;
+      }
+      #map {
+        height: 85%;
+        width: 85%;
+      }
+      footer {
+        width: auto;
+      }
+}
+
+@media (min-width: 581px) and (max-width: 960px) {
+      h1 {
+        margin: 7% auto 1%;
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 0 1px -5px rgba(#1cc751, 0.87);
+      }
+      h2 {
+        margin: 35% auto 0;
+        margin: auto;
+      }
+      h2:nth-child(4) {
+        margin-top: 13%;
+      }
+      h4, h5 {
+        margin: auto;
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 2em;
+        color: #ccc;
+      }
+      header {
+        width: 80%;
+        margin-bottom: 7%;
+      }
+      header img {
+        display: none;
+      }
+      main {
+        display: block;
+        margin: 2% auto;
+        width: 80%;
+        border: 5px solid #aaf;
+      }
+      div.fb-page.fb_iframe_widget {
+        display: block;
+        margin: 10% auto;
+      }
+      .fb-page {
+        margin: auto;
+        padding: 0;
+        border: 0;
+        width: 68%;
+      }
+      .twitterStyle {
+        width:66%;
+        clear: left;
+        margin: 10% auto 10%;
+        border: 0;
+      }
+      #map {
+        height: 50%;
+        width: 50%;
+      }
+      footer{
+        width: 80%;
+      }
+      footer p {
+        text-align: center;
+      }
+}
+@media (min-width: 300px) and (max-width: 580px) {
+    h1 {
+      margin: 8% auto 3%;
+      text-align: center;
+      text-shadow: none;
+    }
+    h4, h5 {
+      margin: auto;
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 2em;
+      color: #ddd;
+    }
+    header img {
+      display: none;
+    }
+    header {
+      width: 80%;
+    }
+    main {
+      display: block;
+      margin: 6% auto 5%;
+    }
+    .ephoto {
+      display: none;
+    }
+    div.fb-page.fb_iframe_widget {
+      display: block;
+      width: 86%;
+    }
+    .fb-page {
+      display: block;
+      margin: auto;
+      clear: both;
+      border: 0;
+    }
+    .twitterStyle {
+      margin: 20% auto 6%;
+      width: 90%;
+      display: block;
+      border: 0;
+    }
+    #map {
+      height: 78%;
+      width: 78%;
+    }
+    footer {
+      width: 80%;
+    }
+    footer p {
+      text-align: center;
+    }
+}

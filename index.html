@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta property="og:title" content="ETG Designer Personal and Social Media Content">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://ericytai.com">
+  <meta name="twitter:widgets:theme" content="dark">
+  <meta property="og:image" content="http://ericytai.com/sign.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="stylesheet" href="main.css">
+  <title>ETG Design Group</title>
+</head>
+
+<body>
+
+
+  <header >
+    <!-- <header class="display:none;"> -->
+    <!-- get the background image from other website -->
+    <img src="http://www.etgdesigner.com/gallery/_images/background.png" alt="background image">
+    <!-- get the personal image from other website -->
+    <img class="ephoto" src="http://www.etgdesigner.com/wpet/wp-content/themes/et_theme/images/photo.jpg" style="width:8%;" alt="eric's photo image">
+    <h1>ETG Design Group</h1>
+    <h4 style="text-shadow: ;">Visual animations bring difference!</h4>
+    <h5>Richmond Hill, Ontario</h5>
+  </header>
+
+  <h2>Our Social Media Contents:</h2>
+
+  <main>
+    <div id="fb-root"></div>    <!-- this might be used by facebook.com -->
+
+    <!-- this is the facebook page's content -->
+    <div class="fb-page" data-href="https://www.facebook.com/Ericwebdesigner-868784999930479/" data-tabs="timeline" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Ericwebdesigner-868784999930479/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ericwebdesigner-868784999930479/">Ericwebdesigner</a></blockquote></div>  <!-- end div .fb-page -->
+
+    <!-- this is twitter's content -->
+    <div class="twitterStyle">
+      <a class="twitter-timeline" href="https://twitter.com/eric_y_tai" data-tweet-limit="3">Tweets by eric_y_tai</a>
+    </div>    <!-- end div .twitterStyle -->
+
+  </main>
+
+
+  <h2 >Find Us:</h2>
+
+  <!-- this is google map's content -->
+  <!-- if this Google map tag is wrapped inside other div, the map won't show  -->
+  <div id="map"></div>
+
+
+  <!-- add the copyright to the footer -->
+  <footer>
+    <p>
+      	&copy; ETG DESIGN CROUP, <em style="color:#faf;">2016</em>
+    </p>
+  </footer>
+
+
+  <!-- script for twitter.com -->
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <!-- script for facebook.com -->
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- script for google_maps.com -->
+  <script>
+    var map;
+    var marker;
+
+    function initMap() {
+          // set variable for maps info image
+          var image = 'sign.png';
+          // set variable for Richmond Hill's latitude and longitude
+          var myLatLng = {lat: 43.865589, lng: -79.439208};
+
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            // set the maps' zoom size
+            zoom: 16
+          });
+
+          // add custom marker to maps
+           marker = new google.maps.Marker({
+              map: map,
+              // set market's title
+              title: 'ETG Designer',
+              // set the animation to marker
+              draggable: true,
+              animation: google.maps.Animation.DROP,
+              icon: image,
+              position: myLatLng
+            });
+            marker.addListener('click', toggleBounce);
+
+          // set content for maps' info window
+          var contentString = '<div class="info">'+
+             '<h3>ETG Design Group</h3>'+
+             '<h3 style="color:#000; font-size:1em;">Richmond Hill, Ontario</h3>'+
+             '<p>Our team will help you to enhance your <strong><em>Motion Graphic Web Design</em></strong></p>'+
+             '</div>';
+
+         var infowindow = new google.maps.InfoWindow({
+           content: contentString
+         });
+
+        // show the info window when click on the marker
+         marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+    }
+    // set the animation when click on the marker
+    function toggleBounce() {
+      if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+        infowindow.open(map, marker);
+      } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
+  </script>
+
+  <!-- script to access the google maps API key for google_maps.com -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLf-yy0oOW3yrSqBvX5_ABYIsLukAcZZI&callback=initMap">
+  </script>
+</body>
+</html>
